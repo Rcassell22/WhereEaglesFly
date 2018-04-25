@@ -1,4 +1,4 @@
-package user;
+package edu.kcc.java.user;
 
 import java.util.ArrayList;
 
@@ -13,26 +13,23 @@ public class User {
      * The username of the current user
      */
     private String username;
+
     /**
-     * The password of the current user; should not be stored...
+     * The retrieved username
+     *
+     * Used for checking whether Gary or Brenda is signed in. Anyone else is
+     * only allowed to see the regular or student view.
      */
-    private String password;
-    /**
-     * The list of roles attached to the current user
-     */
-    private ArrayList<String> roles;
+    private String retrievedUsername;
 
     /**
      * The full constructor
      *
      * @param username
-     * @param password
-     * @param role
      */
-    public User(String username, String password, ArrayList<String> roles) {
+    public User(String username, String retrievedUsername) {
         this.username = username;
-        this.password = password;
-        this.roles = roles;
+        this.retrievedUsername = retrievedUsername;
     }
 
     /**
@@ -40,18 +37,19 @@ public class User {
      */
     public User() {
         this.username = "";
-        this.password = "";
-        this.roles = new ArrayList<>();
+        this.retrievedUsername = "";
     }
 
-    public User(String username, String password) {
+    /**
+     * Constructor without a retrieved username
+     *
+     * @param username
+     */
+    public User(String username) {
         this.username = username;
-        this.password = password;
-        this.roles = new ArrayList<>();
+        this.retrievedUsername = "";
     }
 
-    
-    
     /**
      * The username of the current user
      *
@@ -71,52 +69,25 @@ public class User {
     }
 
     /**
-     * The password of the current user; should not be stored...
+     * The retrieved username
      *
-     * @return the password
+     * Used for checking whether Gary or Brenda is signed in. Anyone else is
+     * only allowed to see the regular or student view.
+     * @return the retrievedUsername
      */
-    public String getPassword() {
-        return password;
+    public String getRetrievedUsername() {
+        return retrievedUsername;
     }
 
     /**
-     * The password of the current user; should not be stored...
+     * The retrieved username
      *
-     * @param password the password to set
+     * Used for checking whether Gary or Brenda is signed in. Anyone else is
+     * only allowed to see the regular or student view.
+     * @param retrievedUsername the retrievedUsername to set
      */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * The list of roles attached to the current user
-     *
-     * @return the roles
-     */
-    public ArrayList<String> getRoles() {
-        return roles;
-    }
-
-    /**
-     * The list of roles attached to the current user
-     *
-     * @param role the roles to set
-     */
-    public void setRoles(ArrayList<String> role) {
-        this.roles = role;
-    }
-
-    /**
-     * Adds a role to the role list.
-     *
-     * @param role The role to add.
-     */
-    public void addRole(String role) {
-        roles.add(role);
-    }
-    
-    public boolean hasRole(String role) {
-        return roles.contains(role);
+    public void setRetrievedUsername(String retrievedUsername) {
+        this.retrievedUsername = retrievedUsername;
     }
 
 }

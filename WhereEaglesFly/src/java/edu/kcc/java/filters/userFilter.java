@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package filters;
+package edu.kcc.java.filters;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -18,7 +18,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import user.User;
+import edu.kcc.java.user.User;
 
 /**
  *
@@ -116,7 +116,7 @@ public class userFilter implements Filter {
             User user = (User)session.getAttribute("user");
             
             // Redirect to index if the user is not authorized
-            if (null == user || user.getRoles().isEmpty()) {
+            if (null == user) {
                 ((HttpServletResponse) response).sendRedirect(
                         ((HttpServletRequest) request).getContextPath()
                         + "/index.jsp");

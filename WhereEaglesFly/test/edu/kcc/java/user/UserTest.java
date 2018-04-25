@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import user.User;
+import edu.kcc.java.user.User;
 
 /**
  *
@@ -47,85 +47,29 @@ public class UserTest {
     }
 
     /**
-     * Test of getPassword method, of class User.
+     * Test of getRetrievedUsername method, of class User.
      */
     @Test
-    public void testGetPassword() {
-        System.out.println("getPassword");
+    public void testGetRetrievedUsername() {
+        System.out.println("getRetrievedUsername");
         User instance = new User();
         String expResult = "";
-        String result = instance.getPassword();
+        String result = instance.getRetrievedUsername();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
 
     /**
-     * Test of setPassword method, of class User.
+     * Test of setRetrievedUsername method, of class User.
      */
     @Test
-    public void testSetPassword() {
-        System.out.println("setPassword");
-        String password = "";
+    public void testSetRetrievedUsername() {
+        System.out.println("setRetrievedUsername");
+        String retrievedUsername = "";
         User instance = new User();
-        instance.setPassword(password);
+        instance.setRetrievedUsername(retrievedUsername);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
-    /**
-     * Test of getRoles method, of class User.
-     */
-    @Test
-    public void testGetRoles() {
-        System.out.println("getRoles");
-        User instance = new User();
-        ArrayList<String> expResult = null;
-        ArrayList<String> result = instance.getRoles();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setRoles method, of class User.
-     */
-    @Test
-    public void testSetRoles() {
-        System.out.println("setRoles");
-        ArrayList<String> role = null;
-        User instance = new User();
-        instance.setRoles(role);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of addRole method, of class User.
-     */
-    @Test
-    public void testAddRole() {
-        System.out.println("addRole");
-        String role = "";
-        User instance = new User();
-        instance.addRole(role);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of hasRole method, of class User.
-     */
-    @Test
-    public void testHasRole() {
-        System.out.println("hasRole");
-        String role = "";
-        User instance = new User();
-        boolean expResult = false;
-        boolean result = instance.hasRole(role);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
 }

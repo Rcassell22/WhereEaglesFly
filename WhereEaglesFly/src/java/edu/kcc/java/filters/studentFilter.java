@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package filters;
+package edu.kcc.java.filters;
 
 import java.io.IOException;
 import java.io.PrintStream;
@@ -18,7 +18,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import user.User;
+import edu.kcc.java.user.User;
 
 /**
  *
@@ -110,25 +110,24 @@ public class studentFilter implements Filter {
         
         Throwable problem = null;
         try {
-            
-            HttpSession session = ((HttpServletRequest)request).getSession();
-            
-            User user = (User)session.getAttribute("user");
-            
+
+            HttpSession session = ((HttpServletRequest) request).getSession();
+
+            User user = (User) session.getAttribute("user");
+
             // Redirect to index if the user is not authorized or go to mainPage
             // if user is not a student
-            if (null != user && !user.getRoles().isEmpty()) {
-                if (!user.hasRole("Student")) {
-                    ((HttpServletResponse) response).sendRedirect(
-                            ((HttpServletRequest) request).getContextPath()
-                            + "/user/mainPage.jsp");
-                }
+            if (null != user) {
+                ((HttpServletResponse) response).sendRedirect(
+                        ((HttpServletRequest) request).getContextPath()
+                        + "/user/mainPage.jsp");
+
             } else {
                 ((HttpServletResponse) response).sendRedirect(
                         ((HttpServletRequest) request).getContextPath()
                         + "/index.jsp");
             }
-            
+
             // Keep this automatically generated code
             chain.doFilter(request, response);
         } catch (Throwable t) {
