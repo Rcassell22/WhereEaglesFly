@@ -3,7 +3,8 @@ package edu.kcc.java.user;
 import java.util.ArrayList;
 
 /**
- * Temporary to enable filters to be working without problems
+ * Temporary to enable filters to be working without problems. Needs to adjusted
+ * to match active directory.
  *
  * @author Jacob Conley
  */
@@ -73,6 +74,7 @@ public class User {
      *
      * Used for checking whether Gary or Brenda is signed in. Anyone else is
      * only allowed to see the regular or student view.
+     *
      * @return the retrievedUsername
      */
     public String getRetrievedUsername() {
@@ -84,6 +86,7 @@ public class User {
      *
      * Used for checking whether Gary or Brenda is signed in. Anyone else is
      * only allowed to see the regular or student view.
+     *
      * @param retrievedUsername the retrievedUsername to set
      */
     public void setRetrievedUsername(String retrievedUsername) {
