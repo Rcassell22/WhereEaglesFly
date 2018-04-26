@@ -1,5 +1,6 @@
 package edu.kcc.java.survey;
 
+import java.time.LocalDate;
 import javax.validation.constraints.*;
 
 /**
@@ -8,6 +9,20 @@ import javax.validation.constraints.*;
  */
 public class Survey {
 
+    /**
+     * The Id of the Survey
+     */
+    @Min(1000000)
+    @NotNull
+    private int surveyID;
+    
+    /**
+     * The Id of the Student
+     */
+    @Min(1000000)
+    @NotNull
+    private int studentID;
+    
     /**
      * The unique code from the student to take the survey
      */
@@ -35,17 +50,29 @@ public class Survey {
     private String salaryRange;   
 
     /**
-     * The full constructor
+     * Date the survey was recorded
+     */
+    @NotNull
+    private LocalDate dateTimeRecorded;
+
+    /**
+     * Full Constructor
+     * @param surveyID
+     * @param studentID
      * @param surveyCode
      * @param EmployerId
      * @param educationAfterKirkwood
-     * @param salaryRange 
+     * @param salaryRange
+     * @param dateTimeRecorded 
      */
-    public Survey(String surveyCode, String EmployerId, boolean educationAfterKirkwood, String salaryRange) {
+    public Survey(int surveyID, int studentID, String surveyCode, String EmployerId, boolean educationAfterKirkwood, String salaryRange, LocalDate dateTimeRecorded) {
+        this.surveyID = surveyID;
+        this.studentID = studentID;
         this.surveyCode = surveyCode;
         this.EmployerId = EmployerId;
         this.educationAfterKirkwood = educationAfterKirkwood;
         this.salaryRange = salaryRange;
+        this.dateTimeRecorded = dateTimeRecorded;
     }
 
     /**
