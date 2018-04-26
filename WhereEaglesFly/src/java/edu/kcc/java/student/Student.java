@@ -13,46 +13,60 @@ public class Student {
      * The Id of the Student
      */
     @Min(100000)
+    @NotNull
     private int studentId;
 
     /**
      * The student's first name
      */
+    @Size(max=100)
+    @NotNull
     private String firstName;
 
     /**
      * The student's last name
      */
+    @Size(max=100)
+    @NotNull
     private String lastName;
 
     /**
      * The student's email
      */
+    @Size(max=240)
+    @NotNull
     private String email;
 
     /**
      * The student's graduation date from Kirkwood
      */
+    @NotNull
     private LocalDate graduationDate;
 
     /**
      * The student's phone number
      */
+    @Max(15)
+    @Null
     private String phoneNumber;
 
     /**
      * The program the student graduated in
      */
+    @Size(max=100)
+    @Null
     private String areaOfEmphasis;
 
     /**
      * Did the student have a degree before Kirkwood
      */
+    @Null
     private boolean priorDegree;
 
     /**
      * Was the student under 24 while attending Kirkwood
      */
+    @Null
     private boolean traditionalStudent;
 
     /**
