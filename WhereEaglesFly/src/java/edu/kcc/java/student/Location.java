@@ -1,5 +1,7 @@
 package edu.kcc.java.student;
 
+import javax.validation.constraints.*;
+
 /**
  *
  * @author Wesley Richardson
@@ -9,26 +11,36 @@ public class Location {
     /**
      * The country the student lives in
      */
+    @Size(max=100)
+    @Null
     private String country;
 
     /**
      * The city the student lives in
      */
+    @Size(max=100)
+    @Null
     private String city;
 
     /**
      * The name of state, province, or other regional name
      */
+    @Size(max=100)
+    @Null
     private String regionId;
 
     /**
      * The postal code of the location of the student
      */
+    @Size(max=100)
+    @Null
     private String postalCode;
 
     /**
      * The street address of the student
      */
+    @Size(max=100)
+    @Null
     private String streetAddress;
 
     public Location(String country, String city, String regionId, String postalCode, String streetAddress) {

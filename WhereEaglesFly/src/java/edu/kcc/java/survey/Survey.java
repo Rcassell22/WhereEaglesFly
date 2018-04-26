@@ -1,5 +1,7 @@
 package edu.kcc.java.survey;
 
+import javax.validation.constraints.*;
+
 /**
  *
  * @author Wesley Richardson
@@ -9,21 +11,27 @@ public class Survey {
     /**
      * The unique code from the student to take the survey
      */
+    @Size(max=100)
+    @NotNull
     private String surveyCode;
     
     /**
      * The name of the employer the student works for
      */
+    @Size(max=1000)
+    @NotNull
     private String EmployerId;
     
     /**
      * Did the student continue their education
      */
+    @Null
     private boolean educationAfterKirkwood;
     
     /**
      * The salary range the student makes
      */
+    @Size(max=50)
     private String salaryRange;   
 
     /**
