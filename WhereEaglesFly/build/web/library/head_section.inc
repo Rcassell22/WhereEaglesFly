@@ -1,0 +1,39 @@
+<!doctype html>
+	<html lang="en-US">
+	<head>
+		<title>KIRKWOOD</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Craig Bootstrap Barkley">
+		<meta name="description" content="Where Eagles Fly.">
+		
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/main_style.css" rel="stylesheet">
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/javascript.js"></script>
+<script>
+			
+			$(document).ready(function(){
+			
+				initialize();
+				
+			});
+		
+</script>
+
+<style type="text/css">     
+    select {
+        width:325px;
+    }
+</style>
+
+
+
+
+
+
+	</head>

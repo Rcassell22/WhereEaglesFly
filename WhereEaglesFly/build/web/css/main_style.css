@@ -1,0 +1,64 @@
+.log_in {
+	float: right;
+	width: 60%;
+	padding-right: 50px;
+
+}
+
+.container {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0px;
+}
+
+.jumbotron {
+	border-radius: 0px;
+	background: #fff;
+}
+
+.display-3 {
+	color: steelblue;
+}
+
+.row {
+	padding: 4px;
+}
+
+.row1 {
+	display: inline-block;
+    text-align: center;
+	padding: 4px;
+}
+.card {
+	margin: 0px 10px;
+}	
+	
+#header {
+	 margin-left: 10px;
+	 height: 190px;
+	background-image:url(../images/eagle.png); 
+	 background-repeat: no-repeat;
+	 background-position: right;
+}
+
+
+.footer_content {
+	float: left;
+}
+
+
+
+.slider_style {
+	
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.sign_up_style {
+	height:700px;
+	width: 70%;
+	border: 1px solid #000;
+	margin: 20px auto;
+	border-radius: 4px;
+	padding: 20px 0px 20px 50px;
+}
