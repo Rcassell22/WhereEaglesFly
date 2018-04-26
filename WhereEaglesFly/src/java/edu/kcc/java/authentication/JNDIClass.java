@@ -48,7 +48,7 @@ public class JNDIClass {
       SearchControls searchCtls = new SearchControls();
       
       //Specify the attributes to return
-      String returnedAtts[]={"kNumber","givenName", "samAccountName"};
+      String returnedAtts[]={"kNumber","givenName"};
       searchCtls.setReturningAttributes(returnedAtts);
       
       //Specify the search scope
@@ -74,7 +74,7 @@ public class JNDIClass {
 
         System.out.println("Name: " + sr.getName());
         Attributes attrs = (Attributes) sr.getAttributes();
-        System.out.println("Account Name: " + attrs.get("samAccountName"));
+        System.out.println("kNumber: " + attrs.get("kNumber"));
       }
 
       System.out.println("Total Results: " + totalResults);
