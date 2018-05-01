@@ -14,38 +14,48 @@ import edu.kcc.java.survey.Survey;
  */
 public interface IStudentDAO {
 
-    int getIdByVerificationCode(String verificationCode);
-
-    ArrayList<Student> getStudentsWithCompletedSurveys();
-
-    Student getStudentById(int id);
-
-    ArrayList<Student> getStudentsWithUncompletedSurveys();
-
-    void deactivateStudentById(int id);
-
-    void createStudent(String firstName, String lastName, String email);
-
-    void updateStudnet(Student student);
-
-    ArrayList<Location> getLocations();
-
-    Location getLocationByStudentId(int studentId);
-
-    void deactivateLocationByStudentId(int studnetId);
-
-    void createLocation(Location location);
-
-    void updateLocation(Location location);
-
-    ArrayList<Survey> getSurveys();
-
-    Survey getSurveyByStudentId(int studentId);
-
-    void deactivateSurveyByStudentId(int studentId);
-
-    void createSurvey(Survey survey);
-
-    void updateSurvey(Survey survey);
+    int create(Student student);
+    
+    int edit(Student newStudent, Student oldStudent);
+    
+    Student retrieve(int studentID);
+    
+    ArrayList<Student> retrieve();
+    
+    int deactivate(int studentID);
+    
+//    int getIdByVerificationCode(String verificationCode);
+//
+//    ArrayList<Student> getStudentsWithCompletedSurveys();
+//
+//    Student getStudentById(int id);
+//
+//    ArrayList<Student> getStudentsWithUncompletedSurveys();
+//
+//    void deactivateStudentById(int id);
+//
+//    void createStudent(String firstName, String lastName, String email);
+//
+//    void updateStudnet(Student student);
+//
+//    ArrayList<Location> getLocations();
+//
+//    Location getLocationByStudentId(int studentId);
+//
+//    void deactivateLocationByStudentId(int studnetId);
+//
+//    void createLocation(Location location);
+//
+//    void updateLocation(Location location);
+//
+//    ArrayList<Survey> getSurveys();
+//
+//    Survey getSurveyByStudentId(int studentId);
+//
+//    void deactivateSurveyByStudentId(int studentId);
+//
+//    void createSurvey(Survey survey);
+//
+//    void updateSurvey(Survey survey);
 
 }
