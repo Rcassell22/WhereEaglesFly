@@ -9,6 +9,20 @@ import javax.validation.constraints.*;
 public class Location {
 
     /**
+     * The ID for the location
+     */
+    @Min(100000)
+    @NotNull
+    private int locationID;
+    
+    /**
+     * The Id of the Student
+     */
+    @Min(100000)
+    @NotNull
+    private int studentId;
+    
+    /**
      * The country the student lives in
      */
     @Size(max=100)
@@ -43,7 +57,19 @@ public class Location {
     @Null
     private String streetAddress;
 
-    public Location(String country, String city, String regionId, String postalCode, String streetAddress) {
+    /**
+     * The Full Constructor
+     * @param locationID
+     * @param studentId
+     * @param country
+     * @param city
+     * @param regionId
+     * @param postalCode
+     * @param streetAddress 
+     */
+    public Location(int locationID, int studentId, String country, String city, String regionId, String postalCode, String streetAddress) {
+        this.locationID = locationID;
+        this.studentId = studentId;
         this.country = country;
         this.city = city;
         this.regionId = regionId;
@@ -147,6 +173,38 @@ public class Location {
      */
     public void setStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
+    }
+
+    /**
+     * The ID for the location
+     * @return the locationID
+     */
+    public int getLocationID() {
+        return locationID;
+    }
+
+    /**
+     * The ID for the location
+     * @param locationID the locationID to set
+     */
+    public void setLocationID(int locationID) {
+        this.locationID = locationID;
+    }
+
+    /**
+     * The Id of the Student
+     * @return the studentId
+     */
+    public int getStudentId() {
+        return studentId;
+    }
+
+    /**
+     * The Id of the Student
+     * @param studentId the studentId to set
+     */
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
 }

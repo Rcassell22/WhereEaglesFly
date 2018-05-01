@@ -80,6 +80,11 @@ public class Student {
     private Location location;
 
     /**
+     * Whether or not the studio is active or not
+     */
+    private boolean active;
+    
+    /**
      * The full constructor
      *
      * @param studentId
@@ -93,10 +98,12 @@ public class Student {
      * @param traditionalStudent
      * @param survey
      * @param location
+     * @param active
      */
     public Student(int studentId, String firstName, String lastName, String email,
             LocalDate graduationDate, String phoneNumber, String areaOfEmphasis,
-            boolean priorDegree, boolean traditionalStudent, Survey survey, Location location) {
+            boolean priorDegree, boolean traditionalStudent, Survey survey, Location location
+            ,boolean active) {
         this.studentId = studentId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -108,6 +115,7 @@ public class Student {
         this.traditionalStudent = traditionalStudent;
         this.survey = survey;
         this.location = location;
+        this.active = active;
     }
 
     /**
@@ -323,6 +331,22 @@ public class Student {
      */
     public void setLocation(Location location) {
         this.location = location;
+    }
+
+    /**
+     * Whether or not the studio is active or not
+     * @return the active
+     */
+    public boolean isActive() {
+        return active;
+    }
+
+    /**
+     * Whether or not the studio is active or not
+     * @param active the active to set
+     */
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }
 

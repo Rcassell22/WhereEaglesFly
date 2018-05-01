@@ -144,6 +144,54 @@ public class Survey {
     public void setSalaryRange(String salaryRange) {
         this.salaryRange = salaryRange;
     }
+
+    /**
+     * The Id of the Survey
+     * @return the surveyID
+     */
+    public int getSurveyID() {
+        return surveyID;
+    }
+
+    /**
+     * The Id of the Survey
+     * @param surveyID the surveyID to set
+     */
+    public void setSurveyID(int surveyID) {
+        this.surveyID = surveyID;
+    }
+
+    /**
+     * The Id of the Student
+     * @return the studentID
+     */
+    public int getStudentID() {
+        return studentID;
+    }
+
+    /**
+     * The Id of the Student
+     * @param studentID the studentID to set
+     */
+    public void setStudentID(int studentID) {
+        this.studentID = studentID;
+    }
+
+    /**
+     * Date the survey was recorded
+     * @return the dateTimeRecorded
+     */
+    public LocalDate getDateTimeRecorded() {
+        return dateTimeRecorded;
+    }
+
+    /**
+     * Date the survey was recorded
+     * @param dateTimeRecorded the dateTimeRecorded to set
+     */
+    public void setDateTimeRecorded(LocalDate dateTimeRecorded) {
+        this.dateTimeRecorded = dateTimeRecorded;
+    }
     
 }
 
