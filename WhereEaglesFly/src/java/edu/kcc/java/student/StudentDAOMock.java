@@ -32,7 +32,22 @@ public class StudentDAOMock implements IStudentDAO{
 
     @Override
     public int edit(Student newStudent, Student oldStudent) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        int rowsAffected = 0;
+        
+        for (Student s : studentList) {
+            if (s.getStudentId() == oldStudent.getStudentId()) {
+                s = newStudent;
+            }
+        }
+        
+        for (Student s : studentList) {
+            if (s == newStudent) {
+                rowsAffected = 1;
+            }
+        }
+        
+        return rowsAffected;
     }
 
     @Override
