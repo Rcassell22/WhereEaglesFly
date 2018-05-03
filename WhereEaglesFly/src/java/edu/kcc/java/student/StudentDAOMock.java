@@ -16,7 +16,6 @@ public class StudentDAOMock implements IStudentDAO{
 
         Student testStudent = new Student();
         testStudent.setStudentId(minID);
-        
         studentList.add(testStudent);
         testStudent.setStudentId(minID + 1);
         studentList.add(testStudent);
@@ -38,7 +37,16 @@ public class StudentDAOMock implements IStudentDAO{
 
     @Override
     public Student retrieve(int studentID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Student student = new Student();
+        
+        for (Student s : studentList) {
+            if (s.getStudentId() == studentID) {
+                student = s;
+            }
+        }
+
+        return student;
     }
 
     @Override
@@ -70,5 +78,6 @@ public class StudentDAOMock implements IStudentDAO{
           
         return newStudentID;
     }
+    
     
 }
