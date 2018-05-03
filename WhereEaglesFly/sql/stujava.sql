@@ -1,18 +1,16 @@
-IF EXISTS(SELECT 1 FROM master.dbo.sysdatabases WHERE name = 'surveyResponses')
-BEGIN
-	DROP DATABASE surveyResponses
-	print '' print '*** Dropping database surveyResponses'
-END
+print ''  print '*** Drop database stujava' ;
+GO
+DROP DATABASE [stujava];
 GO
 
-print '' print '*** Creating database surveyResponses'
+print ''  print '*** Creating database stujava'; 
 GO
-CREATE DATABASE surveyResponses
+CREATE Database [stujava];
 GO
 
-print '' print '*** Using database surveyResponses'
+print '' print '*** Using Database stujava';
 GO
-USE [surveyResponses]
+USE stujava;
 GO
 
 /* ******************************************
