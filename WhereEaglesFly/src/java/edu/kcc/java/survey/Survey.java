@@ -1,5 +1,6 @@
 package edu.kcc.java.survey;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 
@@ -7,7 +8,7 @@ import javax.validation.constraints.*;
  *
  * @author Wesley Richardson
  */
-public class Survey {
+public class Survey implements Serializable {
 
     /**
      * The Id of the Survey
