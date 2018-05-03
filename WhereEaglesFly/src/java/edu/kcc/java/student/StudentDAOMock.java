@@ -51,12 +51,29 @@ public class StudentDAOMock implements IStudentDAO{
 
     @Override
     public ArrayList<Student> retrieve() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return studentList;
+        
     }
 
     @Override
     public int deactivate(int studentID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        Student student = new Student();
+        int rowsAffected = 0;
+        
+        for (Student s : studentList) {
+            if (s.getStudentId() == studentID) {
+                s.setActive(false);
+                student = s;
+            }
+        }
+        
+        if (student.isActive() == false) {
+            rowsAffected = 1;
+        }
+        
+        return rowsAffected;
     }
     
     private int addNewStudent(Student student) {
