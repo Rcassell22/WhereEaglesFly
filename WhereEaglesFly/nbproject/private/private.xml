@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/Reuben/Documents/Java%20III/WhereEaglesFly(5-1-2018)/WhereEaglesFly/WhereEaglesFly/src/java/edu/kcc/java/student/IStudentDAO.java</file>
-            <file>file:/C:/Users/Reuben/Documents/Java%20III/WhereEaglesFly(5-1-2018)/WhereEaglesFly/WhereEaglesFly/src/java/edu/kcc/java/student/StudentDAOMock.java</file>
-            <file>file:/C:/Users/Reuben/Documents/Java%20III/WhereEaglesFly(5-1-2018)/WhereEaglesFly/WhereEaglesFly/src/java/edu/kcc/java/survey/Survey.java</file>
-            <file>file:/C:/Users/Reuben/Documents/Java%20III/WhereEaglesFly(5-1-2018)/WhereEaglesFly/WhereEaglesFly/src/java/edu/kcc/java/student/Student.java</file>
+            <file>file:/D:/WhereEaglesFly/WhereEaglesFly/test/edu/kcc/java/survey/SurveyTest.java</file>
+            <file>file:/D:/WhereEaglesFly/WhereEaglesFly/test/edu/kcc/java/survey/SurveyValidatorTest.java</file>
+            <file>file:/D:/WhereEaglesFly/WhereEaglesFly/src/java/edu/kcc/java/survey/SurveyValidator.java</file>
+            <file>file:/D:/WhereEaglesFly/WhereEaglesFly/src/java/edu/kcc/java/survey/Survey.java</file>
         </group>
     </open-files>
 </project-private>
