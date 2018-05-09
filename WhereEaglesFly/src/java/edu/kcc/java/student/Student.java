@@ -84,6 +84,8 @@ public class Student {
      */
     private boolean active;
     
+    StudentValidator studentValidator = new StudentValidator();
+    
     /**
      * The full constructor
      *
@@ -150,6 +152,7 @@ public class Student {
      * @param studentId the studentId to set
      */
     public void setStudentId(int studentId) {
+        studentValidator.validateStudentId(studentId);
         this.studentId = studentId;
     }
 
@@ -168,6 +171,7 @@ public class Student {
      * @param firstName the firstName to set
      */
     public void setFirstName(String firstName) {
+        studentValidator.validateName(firstName);
         this.firstName = firstName;
     }
 
@@ -186,6 +190,7 @@ public class Student {
      * @param lastName the lastName to set
      */
     public void setLastName(String lastName) {
+        studentValidator.validateName(lastName);
         this.lastName = lastName;
     }
 
@@ -204,6 +209,7 @@ public class Student {
      * @param email the email to set
      */
     public void setEmail(String email) {
+        studentValidator.validateEmail(email);
         this.email = email;
     }
 
@@ -222,6 +228,7 @@ public class Student {
      * @param graduationDate the graduationDate to set
      */
     public void setGraduationDate(LocalDate graduationDate) {
+        studentValidator.validateGraduationDate(graduationDate);
         this.graduationDate = graduationDate;
     }
 
@@ -240,6 +247,7 @@ public class Student {
      * @param phoneNumber the phoneNumber to set
      */
     public void setPhoneNumber(String phoneNumber) {
+        studentValidator.validatePhoneNumber(phoneNumber);
         this.phoneNumber = phoneNumber;
     }
 
@@ -258,6 +266,7 @@ public class Student {
      * @param areaOfEmphasis the areaOfEmphasis to set
      */
     public void setAreaOfEmphasis(String areaOfEmphasis) {
+        studentValidator.validateAreaOfEmphasis(areaOfEmphasis);
         this.areaOfEmphasis = areaOfEmphasis;
     }
 
